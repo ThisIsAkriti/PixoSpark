@@ -1,20 +1,17 @@
+import Button from './Button';
+
+const lists = ['All' , 'Shorts' , 'Trailers', 'Movies' , 'Cooking' , 'Entertainment' , 'Sci-fi' , 'Pop' , 'Art' , 'Drawing' , 'Mixes' , 'EDM' , 'DSA' , 'Piano' , 'New to you'];
 const ButtonList = () => {
   return (
-    <div>
-      <div>
-        <button>All</button>
-        <button>Music</button>
-        <button>Trailers</button>
-        <button>Mysteries</button>
-        <button>T-series</button>
-        <button>Thriller</button>
-        <button>Gaming</button>
-        <button>Entertainment</button>
-        <button>Songs</button>
-        <button>Sci-fi</button>
-      </div>
+    <div className='flex w-[1150px] overflow-x-scroll hide-scrollbar'>
+    <div className= ' flex'> 
+      {lists.map(list => {
+        return <Button key={list} name  = {list}/>
+      })}
+
+    </div>
     </div>
   )
 }
 
-export default ButtonList
+export default ButtonList;
