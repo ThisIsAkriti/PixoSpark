@@ -1,6 +1,6 @@
 import Button from './Button';
 
-const lists = ['All' , 'Shorts' , 'Trailers', 'Movies' , 'Cooking' , 'Entertainment' , 'Sci-fi' , 'Pop' , 'Art' , 'Drawing' , 'Mixes' , 'EDM' , 'DSA' , 'Piano' , 'New to you'];
+const lists = ['All' ,'Trailers',  'Cooking' , 'Entertainment' , 'Pop' , 'Drawing'  , 'EDM' , 'DSA'  , 'New to you'];
 const ButtonList = () => {
   return (
     <div className='flex w-[1150px] overflow-x-scroll hide-scrollbar'>
