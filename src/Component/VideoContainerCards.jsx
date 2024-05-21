@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 const VideoContainerCards = ({ info }) => {
-  console.log(info);
+  
   const {snippet} = info;
   const {channelTitle , thumbnails , title , publishTime} = snippet;
   return(
