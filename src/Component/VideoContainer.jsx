@@ -16,7 +16,7 @@ const VideoContainer = () => {
     const json = await data.json();
    
     setVideoInfo(json.items);
-    console.log(json.items)
+   // console.log(json.items)
   }
 
   return (
