@@ -6,7 +6,7 @@ const Sidebar = () => {
   if(!isMenuOpen) return null;
 
   return (
-    <div className=" shadow-md shadow-gray-400 py-4 px-10">
+    <div className=" shadow-md shadow-gray-400 py-4 px-8 fixed bg-white">
       <div className="space-y-4 ">
         <div className="p-2 space-y-3">
         <Link to={"/"}>
