@@ -3,6 +3,7 @@ import { toggleMenu } from "../utils/appSlice";
 import { useEffect, useState } from "react";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -38,13 +39,20 @@ const Header = () => {
   const togglMenuHandler = () => {
     dispatch(toggleMenu());
   }
+
+
+
   return (
     <div className=" grid grid-flow-col h-20 items-center opacity-95 border p-5 fixed w-full top-0 bg-white shadow-md shadow-gray-200"> 
       <div className="flex col-span-1 items-center">
         <img
-         onClick={() => togglMenuHandler()} 
-         src="/images/HamburgerMenu.png" alt="Hamburger Menu" className="size-6 cursor-pointer" />
-        <img src="/images/logo.png" alt="logo"  className=" h-6 ml-6 cursor-pointer"/>
+        onClick={() => togglMenuHandler()} 
+        src="/images/HamburgerMenu.png" alt="Hamburger Menu" className="size-6 cursor-pointer md:flex hidden" />
+       
+       <a href="/">
+        <img src="/images/logo.png" alt="logo" className="md:h-6 h-8 md:ml-6 cursor-pointer" />
+       </a>
+       
       </div>
 
       <div className="flex col-span-10 ml-28 items-center ">
@@ -55,7 +63,7 @@ const Header = () => {
             <input
             type="text"
             placeholder="Search"
-            className=" py-2 px-4 w-2/3 rounded-tl-full  rounded-bl-full outline-none border-gray-300 border border-r-0"
+            className=" md:flex hidden py-2 px-4 w-2/3 rounded-tl-full  rounded-bl-full outline-none border-gray-300 border border-r-0"
             value = {searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
@@ -63,12 +71,12 @@ const Header = () => {
             />
 
             <div
-              className=" rounded-tr-full  rounded-br-full py-2  px-5 border-gray-300 border bg-gray-100 ">
+              className=" md:rounded-tr-full  md:rounded-br-full md:py-2  md:px-5 md:border-gray-300 md:border md:bg-gray-100 ">
               <img src="/images/search.png" alt="search_icon" className=" size-6 "/>
             </div>
 
             <div
-              className="bg-gray-100 p-2 rounded-full ml-6">
+              className="bg-gray-100 p-2 rounded-full ml-6 md:flex hidden">
               <img src="/images/voiceRec.png" alt="Voice recorder" className="size-6" />
             </div>
           </div>
@@ -107,4 +115,3 @@ const Header = () => {
 
 export default Header
 
-/**  */
