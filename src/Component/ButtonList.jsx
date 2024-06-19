@@ -1,9 +1,9 @@
 import Button from './Button';
 
-const lists = ['All' ,'Trailers',  'Cooking' , 'Entertainment' , 'Pop' , 'Drawing'  , 'EDM' , 'DSA'  , 'New to you'];
+const lists = ['All' ,'Trailers','Shorts', 'Music', 'Cooking' , 'Movies', 'Entertainment' , 'Pop' , 'Drawing'  , 'EDM' , 'DSA'  , 'New to you'];
 const ButtonList = () => {
   return (
-    <div className='flex w-[1150px] overflow-x-scroll hide-scrollbar'>
+    <div className='flex w-[1500px] overflow-x-scroll hide-scrollbar '>
     <div className= ' flex'> 
       {lists.map(list => {
         return <Button key={list} name  = {list}/>
