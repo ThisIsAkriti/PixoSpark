@@ -5,17 +5,13 @@ import VideoContainer from "./VideoContainer"
 const MainContainer = () => {
 
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen)
-  if(isMenuOpen) return (
-    <div className= "ml-[190px]">
-      <ButtonList/>
-      <VideoContainer/>
-    </div>
-  )
 
   return (
     <div>
+     <div className={`${isMenuOpen ? "md:ml-[20%]" : "md:ml-8"}`}>
       <ButtonList/>
       <VideoContainer/>
+      </div>
     </div>
   )
 

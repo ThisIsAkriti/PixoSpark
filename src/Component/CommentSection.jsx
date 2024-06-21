@@ -97,8 +97,7 @@ const CommentList = ({comments}) => {
 
 const CommentSection = () => {
   return (
-    <div className="m-5 p-2">
-      <h1 className="text-xl font-bold">comments</h1>
+    <div className="mx-5 px-2">
       <CommentList comments = {commentsData}/>
     </div>
   )

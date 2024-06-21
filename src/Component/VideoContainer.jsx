@@ -14,16 +14,16 @@ const VideoContainer = () => {
   const getVideos = async () => { 
     const data = await fetch(url);
     const json = await data.json();
-   
+    console.log(json.items);
     setVideoInfo(json.items);
-   // console.log(json.items)
+  
   }
 
   return (
     <div className="flex flex-wrap">
       {VideoInfo.map(video => (
-      <Link key={video.id.videoId} to={"/watch?v=" + video.id.videoId }>
-        <VideoContainerCards key={video.id.videoId} info={video}/>
+      <Link key={video.id} to={"/watch?v=" + video.id }>
+        <VideoContainerCards key={video.id} info={video}/>
       </Link>
       ))}
       

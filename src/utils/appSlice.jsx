@@ -10,7 +10,7 @@ const appSlice = createSlice({
             state.isMenuOpen = !state.isMenuOpen;
         },
         closeMenu: (state) => {
-            state.isMenuOpen = true;
+            state.isMenuOpen = false;
         }
     },
 });

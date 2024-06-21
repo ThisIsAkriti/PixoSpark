@@ -1,18 +1,27 @@
 /* eslint-disable react/prop-types */
 
+import moment from "moment/moment";
+import { valueConverter } from "../utils/constants";
+
 const VideoContainerCards = ({ info }) => {
   
   const {snippet} = info;
-  const {channelTitle , thumbnails , title , publishTime} = snippet;
+  const {statistics} = info;
+  const {channelTitle , thumbnails , title , publishedAt } = snippet;
+  const { viewCount} = statistics;
   return(
-    <div className="py-2 md:px-4 md:m-2 ml-6 md:w-64 sm:w-80 w-[440px] shadow-md shadow-gray-500 rounded-lg md:mb-0 mb-8">
-      <img className=" rounded-md md:h-auto h-40 w-full object-cover" src={thumbnails.high.url} alt="thumbnail_Image" />
-      <ul className="p-2">
+    <div className=" md:m-2 ml-6 md:w-60 sm:w-80 w-[440px] shadow-md shadow-gray-300 rounded-md md:mb-4 mb-8 ">
+      <img className=" rounded-tr-md rounded-tl-md md:h-auto h-40 w-full object-cover" src={thumbnails.standard.url} alt="thumbnail_Image" />
+      <ul className="p-2 space-y-2">
         
-        <li className=" font-bold py-2 text-lg">{title}</li>
-        <li className="text-md text-gray-500 ">{channelTitle}</li>
-        
-        <li className="text-sm text-gray-500">{publishTime}</li>
+        <li className=" font-bold text-[16px] line-clamp-2 ">{title}</li>
+        <li className="text-md text-gray-500 text-sm ">{channelTitle}</li>
+        <div className="flex space-x-4 text-sm">
+          
+          <li className=" text-gray-500">{valueConverter(viewCount)} views</li>
+          <li className=" text-gray-500">&bull; {moment(publishedAt).fromNow()}</li>
+          
+        </div>
 
       </ul>
     </div>
