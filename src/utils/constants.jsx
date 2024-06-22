@@ -1,3 +1,5 @@
+import { useSearchParams } from "react-router-dom";
+
 export const API_KEY = "AIzaSyDFxts_eQHnR78DjqIwwomP1YMXb1G45Og";
 
 export const url =
@@ -19,3 +21,5 @@ export const valueConverter = (value) => {
         return value;
     }
  }
+ export const videoData_Api = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${API_KEY}&id=`;
+export const comments_API = `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&key=${API_KEY}&videoId=`;
