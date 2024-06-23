@@ -55,8 +55,8 @@ const CommentSection = () => {
         <div>
             {CommentData.map((item , index) => {
                 return (
-                    <div key={index} className="mt-4  flex bg-gray-100 py-2 shadow-md">
-                        <img className=" w-10 h-10 mx-4" src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="pfp" />
+                    <div key={index} className="mt-4 mx-4 flex bg-gray-50 py-3 shadow-sm">
+                        <img className=" w-10 h-10 mx-4 rounded-full" src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="pfp" />
                         <div className="text-sm space-y-1">
                             <div className="flex space-x-4">
                                 <p className="font-semibold text-xs">{item.snippet.topLevelComment.snippet.authorDisplayName}</p>
