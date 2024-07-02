@@ -34,7 +34,7 @@ const WatchPage = () => {
   return (
     <>
   
-    <div className="flex flex-col w-full mr-1">
+    <div className="flex flex-col mt-20 p-1">
       <div className= "md:flex">
         <div>
 
