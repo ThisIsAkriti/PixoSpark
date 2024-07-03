@@ -7,8 +7,8 @@ const MainContainer = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen)
 
   return (
-    <div>
-     <div className={`${isMenuOpen ? "md:ml-[20%]" : "md:ml-8"}`}>
+    <div className=" w-full">
+     <div className={`${isMenuOpen ? "md:ml-[16%] sm:ml-[30%] flex flex-col" : "ml-6"}`}>
       <ButtonList/>
       <VideoContainer/>
       </div>

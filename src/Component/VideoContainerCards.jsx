@@ -10,7 +10,7 @@ const VideoContainerCards = ({ info }) => {
   const {channelTitle , thumbnails , title , publishedAt } = snippet;
   const { viewCount} = statistics;
   return(
-    <div className=" md:m-2 ml-6 md:w-60 sm:w-80 w-[440px] shadow-md shadow-gray-300 rounded-md md:mb-4 mb-8 ">
+    <div className=" md:m-2 md:ml-6 ml-2 md:w-60 sm:w-80 w-[350px] shadow-md shadow-gray-300 rounded-md md:mb-4 mb-8">
       <img className=" rounded-tr-md rounded-tl-md md:h-auto h-40 w-full object-cover" src={thumbnails.standard.url} alt="thumbnail_Image" />
       <ul className="p-2 space-y-2">
         

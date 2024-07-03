@@ -10,7 +10,7 @@ const WatchPageDetails = ({ info }) => {
     }
     return(
     <>
-    <div className="flex -mt-6">
+    <div className="flex md:-mt-6 mt-2">
       <ul>
         <div className=" font-semibold text-lg mx-4 mb-2">
           | {info?.snippet?.title}

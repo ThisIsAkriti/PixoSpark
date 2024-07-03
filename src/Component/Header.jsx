@@ -54,7 +54,7 @@ const Header = () => {
        
       </div>
 
-      <div className="flex col-span-10 ml-28 items-center ">
+      <div className="flex col-span-10 md:ml-28 ml-4 items-center ">
 
         <div className="w-full">
           <div className="flex">
@@ -62,7 +62,7 @@ const Header = () => {
             <input
             type="text"
             placeholder="Search"
-            className=" md:flex hidden py-2 px-4 w-2/3 rounded-tl-full  rounded-bl-full outline-none border-gray-300 border border-r-0"
+            className=" sm:flex hidden py-2 px-4 w-2/3 rounded-tl-full  rounded-bl-full outline-none border-gray-300 border border-r-0"
             value = {searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
@@ -70,17 +70,17 @@ const Header = () => {
             />
 
             <div
-              className=" md:rounded-tr-full  md:rounded-br-full md:py-2  md:px-5 md:border-gray-300 md:border md:bg-gray-100 ">
+              className=" sm:rounded-tr-full  sm:rounded-br-full sm:py-2 mr-4 sm:px-5 sm:border-gray-300 sm:border sm:bg-gray-100 ">
               <img src="/images/search.png" alt="search_icon" className=" size-6 "/>
             </div>
 
             <div
-              className="bg-gray-100 p-2 rounded-full ml-6 md:flex hidden">
+              className="bg-gray-100 p-2 rounded-full ml-6 lg:flex hidden">
               <img src="/images/voiceRec.png" alt="Voice recorder" className="size-6" />
             </div>
           </div>
 
-          {showSuggestions && <div className="fixed bg-white shadow-md  shadow-gray-600 rounded-xl py-3 px-4 w-[555px] ">
+          {showSuggestions && <div className="fixed bg-white shadow-md  shadow-gray-600 rounded-xl py-3 px-4 xl:w-[555px] sm:w-[240px] sm:flex hidden ">
             <ul>
               {suggestions.map((s) => (
                 <li key={s} className="hover:bg-gray-50 py-2 px-2 shadow-sm">{s}</li>
@@ -94,7 +94,7 @@ const Header = () => {
 
       <div className="flex col-span-1">
         
-        <div className=" mr-6">
+        <div className=" mr-6 md:flex hidden">
           <img className="size-6" src="/images/create.png" alt="create_video" />
         </div>
 

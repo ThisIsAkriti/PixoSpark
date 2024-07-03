@@ -23,8 +23,8 @@ const LiveChat = () => {
   })
   
   return (
-    <>
-      <div className="w-full border-gray-400  bg-slate-50 rounded-lg  border m-1 text-xs h-[450px] overflow-y-scroll no-scrollbar flex flex-col-reverse">
+    <div>
+      <div className="w-full border-gray-400  bg-slate-50 rounded-lg border text-xs sm:h-[450px] h-[300px] overflow-y-scroll no-scrollbar flex flex-col-reverse mr-5 md:mt-0 mt-4">
         
         {chatMessages.map(c => <ChatMsgs
         key={c.index}
@@ -33,24 +33,24 @@ const LiveChat = () => {
         />)}
       </div>
 
-      <form className="w-full grid grid-flow-col m-1 rounded-lg border border-gray-400 py-1" onSubmit={(e) => {
+      <form className="grid grid-flow-col m-1 rounded-lg border border-gray-400 p-2" onSubmit={(e) => {
         e.preventDefault();
         console.log("form submitted!") , liveMsg
         dispatch(
           addMsg({
-            name: "aimer aie",
+            name: "You",
             message: liveMsg,
           })
         );
         setLiveMsg("");
         }}>
-        <input className=" text-sm ml-2 col-span-10  rounded-tl-lg rounded-bl-lg px-2 outline-none" type="text" placeholder="Live Chat" value={liveMsg} onChange={(e) => {setLiveMsg(e.target.value)}}
+        <input className=" text-sm ml-2 col-span-10  rounded-tl-lg rounded-bl-lg px-2 outline-none" type="text" placeholder="Message" value={liveMsg} onChange={(e) => {setLiveMsg(e.target.value)}}
           />
 
-        <button className=" w-16 rounded-md border border-gray-300 text-gray-500 text-sm col-span-1">Send</button>
+        <button className=" rounded-md border border-gray-300 text-gray-500 text-sm col-span-1 w-full">Send</button>
 
       </form>
-    </>
+    </div>
   )
 }
 
