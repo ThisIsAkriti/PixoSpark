@@ -39,7 +39,7 @@ const WatchPage = () => {
         <div className="px-2">
 
           <iframe
-            className="md:bg-red-700 lg:bg-green-700 sm:bg-yellow-400 bg-blue-700 py-1 flex m-auto rounded-lg mt-1 lg:w-[1000px] md:w-[900px] sm:w-[620px] w-[390px]  md:h-[450px] sm:h-[350px] h-[250px] md:shadow-none shadow-md shadow-gray-400 mb-6 md:mb-0"
+            className="py-1 flex m-auto rounded-lg mt-1 lg:w-[1000px] md:w-[900px] sm:w-[620px] w-[390px]  md:h-[450px] sm:h-[350px] h-[250px] md:shadow-none shadow-md shadow-gray-400 mb-6 md:mb-0"
           
             src={"https://www.youtube.com/embed/" + searchParams.get('v') + "?si=VgAEGW3JMbysJZbC?autoplay=1"}
             title="YouTube video player"  
