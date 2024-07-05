@@ -100,16 +100,16 @@ const Header = () => {
       <div className="flex col-span-1">
         
         <div className=" mr-6 md:flex hidden">
-          <img className="size-6" src="/images/create.png" alt="create_video" />
+          <img className="size-7" src="/images/create.png" alt="create_video" />
         </div>
         <Link to='/Notification'>
-        <div className=" mr-6 cursor-pointer active:shadow-blue-400 active:shadow-md active:rounded-full active:bg-blue-200 ">
-          <img className="size-6 cursor-pointer" src="/images/notifications.png" alt="notification" />
+        <div className=" mr-6 cursor-pointer border-gray-300 border rounded-md shadow-gray-500 shadow-md active:border-none active:shadow-none ">
+          <img className="size-7 cursor-pointer rounded-md" src="/images/notification.gif" alt="notification" />
         </div>
         </Link>
         
-        <div onClick={() => toggleProfileHandle()} className=" cursor-pointer shadow-blue-400 shadow-md rounded-full active:bg-blue-200 active:shadow-none">
-          <img className="size-6" src="/images/profile.png" alt="profile" />
+        <div onClick={() => toggleProfileHandle()} className=" cursor-pointer border-gray-300 border rounded-md shadow-gray-500 shadow-md active:border-none active:shadow-none ">
+          <img className="size-7 rounded-md" src="/images/myprofile.gif" alt="profile" />
         </div>
        
 

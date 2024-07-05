@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 export const API_KEY = "AIzaSyDFxts_eQHnR78DjqIwwomP1YMXb1G45Og";
 
 export const url =
-`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${API_KEY}`;
+`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${API_KEY}&videoCategoryId=`;
 
 export const YOUTUBE_SEARCH_API = `https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=`;
 

@@ -1,45 +1,34 @@
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ category , setCategory}) => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen)
   if(!isMenuOpen) return null;
 
   return (
-    <div className=" shadow-md shadow-gray-400 py-4 px-8 fixed bg-white">
-      <div className="space-y-4 ">
-        <div className="p-2 space-y-3">
+    <div className=" shadow-md shadow-gray-400 py-4 px-8 fixed bg-white h-screen overflow-y-auto">
+      <div>
+        <div className="px-2">
         <Link to={"/"}>
-          <p>Home</p>
+          <p className="font-bold mb-3 mt-2 cursor-pointer"  onClick={() => setCategory(0)}>Home</p>
         </Link> 
-        <p>Shorts</p>
-        <p>Subscription</p>
-        </div>
-        
-        <div className=" border-gray-300 border-t p-2">
-          <p className=" font-bold mb-3">You</p>
-          <div className=" space-y-3">
-            <p>History</p>
-            <p>Playlists</p>
-            <p>Watch later</p>
-            <p>Liked videos</p>
-          </div>
+       
         </div>
 
         <div className="border-gray-300 border-t p-2">
-          <p className="font-bold mb-3">Explore</p>
-          <div className="space-y-3">
-            <p>Trending</p>
-            <p>Shopping</p>
-            <p>Music</p>
-            <p>Movies</p>
-            <p>Live</p>
-            <p>Gaming</p>
-            <p>News</p>
-            <p>Sports</p>
-            <p>Courses</p>
-            <p>Fashion & Beauty</p>
-            <p>Podcasts</p>
+          <p className="font-bold mb-4 mt-3">Explore</p>
+          <div className="space-y-4">
+            <p className="cursor-pointer" onClick={() => setCategory(28)}>Science & Technology</p>
+            <p className="cursor-pointer" onClick={() => setCategory(2)}>Autos & Vehicles</p>
+            <p className="cursor-pointer" onClick={() => setCategory(24)}>Entertainment</p>
+            <p className="cursor-pointer" onClick={() => setCategory(26)}>Howto & Style </p>
+            <p className="cursor-pointer" onClick={() => setCategory(25)}>News & Politics</p>
+            <p className="cursor-pointer" onClick={() => setCategory(10)}>Music</p>
+            <p className="cursor-pointer" onClick={() => setCategory(2)}>Autos & Vehicle</p>
+            <p className="cursor-pointer" onClick={() => setCategory(15)}>Pets & Animals</p>
+            <p className="cursor-pointer" onClick={() => setCategory(17)}>Sports</p>
+            <p className="cursor-pointer" onClick={() => setCategory(20)}>Gaming</p>
+            <p className="cursor-pointer" onClick={() => setCategory(23)}>Comedy</p>
           </div>
         </div>
       

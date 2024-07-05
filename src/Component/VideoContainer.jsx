@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react"
-import { url} from "../utils/constants";
+import {  url} from "../utils/constants";
 import VideoContainerCards from "./VideoContainerCards";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const VideoContainer = () => { 
+const VideoContainer = ({category}) => { 
+  
   const [VideoInfo , setVideoInfo] = useState([]);
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen)
   useEffect(() => {
 
     getVideos();
 
-  } , [])
+  } , [category])
   
   const getVideos = async () => { 
-    const data = await fetch(url);
+    //const videoContainerUrl = url + {category};
+    const Url = url + category;
+    const data = await fetch(Url);
     const json = await data.json();
+    console.log(json)
     setVideoInfo(json.items);
   
   }
