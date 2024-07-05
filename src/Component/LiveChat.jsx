@@ -44,10 +44,10 @@ const LiveChat = () => {
         );
         setLiveMsg("");
         }}>
-        <input className=" text-sm ml-2 col-span-10  rounded-tl-lg rounded-bl-lg px-2 outline-none" type="text" placeholder="Message" value={liveMsg} onChange={(e) => {setLiveMsg(e.target.value)}}
+        <input className=" text-sm ml-2 col-span-10  rounded-tl-lg rounded-bl-lg px-2 outline-none placeholder-blue-800" type="text" placeholder="Message" value={liveMsg} onChange={(e) => {setLiveMsg(e.target.value)}}
           />
 
-        <button className=" rounded-md border border-gray-300 text-gray-500 text-sm col-span-1 w-full">Send</button>
+        <button className=" rounded-md border border-blue-800  text-sm col-span-1 w-full text-blue-800 px-2 active:bg-blue-800 active:text-white">Send</button>
 
       </form>
     </div>

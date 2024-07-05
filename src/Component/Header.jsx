@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
 
+import { Link } from "react-router-dom";
+
+import { toggleProfile } from "../utils/profileSlice";
+
 const Header = () => {
 
   const [searchQuery , setSearchQuery] = useState("")
@@ -38,8 +42,9 @@ const Header = () => {
   const togglMenuHandler = () => {
     dispatch(toggleMenu());
   }
-
-
+  const toggleProfileHandle = () => {
+    dispatch(toggleProfile());
+  }
 
   return (
     <div className=" grid grid-flow-col h-20 items-center opacity-95 border p-5 fixed w-full top-0 bg-white shadow-md shadow-gray-200"> 
@@ -57,7 +62,7 @@ const Header = () => {
       <div className="flex col-span-10 md:ml-28 ml-4 items-center ">
 
         <div className="w-full">
-          <div className="flex">
+          <div className="md:flex hidden">
           
             <input
             type="text"
@@ -70,7 +75,7 @@ const Header = () => {
             />
 
             <div
-              className=" sm:rounded-tr-full  sm:rounded-br-full sm:py-2 mr-4 sm:px-5 sm:border-gray-300 sm:border sm:bg-gray-100 ">
+              className=" sm:rounded-tr-full  sm:rounded-br-full sm:py-2 sm:px-5 sm:ml-0 ml-20 sm:border-gray-300 sm:border sm:bg-gray-100 ">
               <img src="/images/search.png" alt="search_icon" className=" size-6 "/>
             </div>
 
@@ -97,14 +102,16 @@ const Header = () => {
         <div className=" mr-6 md:flex hidden">
           <img className="size-6" src="/images/create.png" alt="create_video" />
         </div>
-
-        <div className=" mr-6">
-          <img className="size-6" src="/images/notifications.png" alt="notification" />
+        <Link to='/Notification'>
+        <div className=" mr-6 cursor-pointer active:shadow-blue-400 active:shadow-md active:rounded-full active:bg-blue-200 ">
+          <img className="size-6 cursor-pointer" src="/images/notifications.png" alt="notification" />
         </div>
+        </Link>
         
-        <div>
+        <div onClick={() => toggleProfileHandle()} className=" cursor-pointer shadow-blue-400 shadow-md rounded-full active:bg-blue-200 active:shadow-none">
           <img className="size-6" src="/images/profile.png" alt="profile" />
         </div>
+       
 
       </div>
 

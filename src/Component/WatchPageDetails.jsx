@@ -18,8 +18,9 @@ const WatchPageDetails = ({ info }) => {
         <div className="flex space-x-5 mx-4">
         <li className=" text-gray-500">{valueConverter(info?.statistics?.viewCount)} views</li>
         <li className=" text-gray-500 flex">{valueConverter(info?.statistics?.likeCount)} 
-        {!liked && <img className="size-5 mx-1" src="/images/like.png" onClick={isLiked} />}
-        {liked && <img src="/images/heart.png" className="size-5 mx-1" onClick={isLiked} /> }
+        {!liked && <img className="size-5 mx-1" src="/images/like.gif" onClick={isLiked} />}
+        {liked &&<img src="/images/loveGif.gif" alt="gif"className="size-5 mx-1" onClick={isLiked} /> 
+        }
         </li>
         </div>
         

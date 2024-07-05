@@ -2,9 +2,10 @@ import Header from "./Component/Header"
 import Body from "./Component/Body"
 import { Provider } from "react-redux"
 import store from "./utils/store"
-import { Route, RouterProvider, Routes, createBrowserRouter } from "react-router-dom";
-import MainContainer from "./Component/MainContainer";
+import { Route, Routes,  } from "react-router-dom";
 import WatchPage from "./Component/WatchPage";
+import Notification from "./Component/Notification";
+import Profile from "./Component/Profile";
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path='/' element = {<Body/>}/>
         <Route path='/watch' element = {<WatchPage/>}/>
+        <Route path="/Notification" element = {<Notification/>}/>
 
       </Routes>
     </div>

@@ -32,14 +32,14 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <>
+    <div className=" pb-4 border-b-2 border-gray-30">
   
-    <div className="flex flex-col mt-20 p-1">
+    <div className="flex flex-col mt-20 py-2">
       <div className= "md:flex">
-        <div className="px-2">
+        <div className="">
 
           <iframe
-            className="py-1 flex m-auto rounded-lg mt-1 lg:w-[1000px] md:w-[900px] sm:w-[620px] w-[390px]  md:h-[450px] sm:h-[350px] h-[250px] md:shadow-none shadow-md shadow-gray-400 mb-6 md:mb-0"
+            className="flex m-auto rounded-lg mt-1 lg:w-[1000px] md:w-[900px] sm:w-[620px] w-[390px]  md:h-[450px] sm:h-[350px] h-[250px] md:shadow-none shadow-md shadow-gray-400 mb-6 md:mb-0"
           
             src={"https://www.youtube.com/embed/" + searchParams.get('v') + "?si=VgAEGW3JMbysJZbC?autoplay=1"}
             title="YouTube video player"  
@@ -58,7 +58,7 @@ const WatchPage = () => {
     <div className="w-full md:hidden ">
       <LiveChat/>
     </div>
-    </>
+  </div>
   )
 }
 

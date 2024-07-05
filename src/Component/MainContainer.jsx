@@ -8,7 +8,7 @@ const MainContainer = () => {
 
   return (
     <div className=" w-full">
-     <div className={`${isMenuOpen ? "md:ml-[16%] sm:ml-[30%] flex flex-col" : "ml-6"}`}>
+     <div className={`${isMenuOpen ? "md:ml-[16%] sm:ml-[30%] flex flex-col" : "sm:ml-6"}`}>
       <ButtonList/>
       <VideoContainer/>
       </div>
