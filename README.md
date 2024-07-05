@@ -11,11 +11,19 @@
 
 * Live Comment Section(api polling) - generates messages randomly that dispatches after every 500milliseconds and message can also be inputed in between liveChats.
 
-## 
-### Get CORS plugin:
-https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
-
 ### Run the project using cmd:
 * npm run dev 
+
+## Home Page:
+![alt text](img1.png)
+
+## Browse Page:
+![alt text](img2.png)
+
+## Search bar:
+![alt text](img3.jpg)
+
+### Get CORS plugin for Search bar :
+https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
  
 ### Keep coding💙.
