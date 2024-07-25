@@ -5,7 +5,7 @@ import store from "./utils/store"
 import { Route, Routes,  } from "react-router-dom";
 import WatchPage from "./Component/WatchPage";
 import Notification from "./Component/Notification";
-import Profile from "./Component/Profile";
+
 
 
 const App = () => {

@@ -15,7 +15,7 @@ const VideoContainer = ({category}) => {
   } , [category])
   
   const getVideos = async () => { 
-    //const videoContainerUrl = url + {category};
+    
     const Url = url + category;
     const data = await fetch(Url);
     const json = await data.json();
