@@ -1,6 +1,5 @@
-import { useSearchParams } from "react-router-dom";
 
-export const API_KEY = "AIzaSyDFxts_eQHnR78DjqIwwomP1YMXb1G45Og";
+export const API_KEY = import.meta.env.REACT_APP_MY_API_KEY;
 
 export const url =
 `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${API_KEY}&videoCategoryId=`;
