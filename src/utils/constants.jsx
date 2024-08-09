@@ -1,6 +1,6 @@
 
 //export const API_KEY = import.meta.env.VITE_MY_API_KEY 
-
+export const  API_KEY  = "AIzaSyAlg6urJz-jQHS6KMxueG_BIrTqVdt1Qcw"
 export const url =
 `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${API_KEY}&videoCategoryId=`;
 
@@ -20,7 +20,5 @@ export const valueConverter = (value) => {
         return value;
     }
  }
-
- export const  API_KEY  = "AIzaSyAlg6urJz-jQHS6KMxueG_BIrTqVdt1Qcw"
  export const videoData_Api = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${API_KEY}&id=`;
 export const comments_API = `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&key=${API_KEY}&videoId=`;
